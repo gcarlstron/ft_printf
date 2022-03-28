@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 10:46:59 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/09 16:20:19 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/23 20:24:59 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int print_parameter(char *pointer, va_list args)
 		chars_written += printf_u(args);
 	if (*pointer == 'x' || *pointer == 'X')
 		chars_written += printf_x(args, (char*)pointer);
+	if (*pointer == '%')
+		return(write(1, "%", 1));
 	return (chars_written);
 }

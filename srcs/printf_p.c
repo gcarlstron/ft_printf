@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 12:35:06 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/09 16:01:10 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/23 14:15:30 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int printf_p(va_list args)
     num = (long int) ptr;
     hex = ft_itoh(num, 0);
 	strlen = ft_strlen(hex);
-	strlen = write(0, hex, strlen);
+	strlen = write(1, hex, strlen);
 	free(hex);
 	return (strlen+2);
 }

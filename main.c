@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 10:52:33 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/09 16:04:40 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/23 20:19:17 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,23 @@
 
 int	main(void)
 {
-	int testei = 4242;
-	int tested = 4242;
-	char testec = 'c';
-	char *testes = "testado uma string";
-	void *testep = &testes;
-	unsigned int testeu = -4242;
-	int testex = 4242;
-	int myretorno;
-	int retorno;
-	
+	int				testei;
+	int				tested;
+	char			testec;
+	char			*testes;
+	void			*testep;
+	unsigned int	testeu;
+	int				testex;
+	int				myretorno;
+	int				retorno;
+
+	testei = 4242;
+	tested = -4242;
+	testec = 'c';
+	testes = NULL;
+	testep = &testes;
+	testeu = -1;
+	testex = 9999;
 	myretorno = ft_printf("i : %i\n", testei);
 	printf("%i\n",myretorno);
 	myretorno += ft_printf("d : %d\n", tested);
@@ -42,15 +49,23 @@ int	main(void)
 	myretorno += ft_printf("X : %X\n", testex);
 	printf("%i\n",myretorno);
 	ft_printf("myretorno : %i\n", myretorno);
+	printf("-------------------------------\n");
 	retorno = printf("i : %i\n", testei);
+	printf("%i\n",retorno);
 	retorno += printf("d : %d\n", tested);
+	printf("%i\n",retorno);
 	retorno += printf("c : %c\n", testec);
+	printf("%i\n",retorno);
 	retorno += printf("s : %s\n", testes);
+	printf("%i\n",retorno);
 	retorno += printf("p : %p\n", testep);
+	printf("%i\n",retorno);
 	retorno += printf("u : %u\n", testeu);
+	printf("%i\n",retorno);
 	retorno	+= printf("x : %x\n", testex);
+	printf("%i\n",retorno);
 	retorno += printf("X : %X\n", testex);
+	printf("%i\n",retorno);
 	printf("retorno : %i\n", retorno);
-
 	return (0);
 }

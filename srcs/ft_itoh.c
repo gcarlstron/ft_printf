@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:02:30 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/09 15:30:25 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:17:18 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,17 @@ char	*ft_itoh(intptr_t n, int cap)
 	if (n == 0)
 		buffer[0] = '0';
 	buffer[len] = '\0';
+	if (cap == 0)
+		cap = 32;
+	else
+		cap = 0;
 	while (n != 0 && len >= 0)
 	{
 		new_n = n % 16;
 		if (new_n < 10)
 			buffer[len - 1] = new_n + 48;
-		else if (new_n >= 10 && cap == 0)
-			buffer[len - 1] = new_n + 87;
 		else
-			buffer[len - 1] = new_n + 55;
+			buffer[len - 1] = new_n + 55 + cap;
 		n = n / 16;
 		len--;
 	}
