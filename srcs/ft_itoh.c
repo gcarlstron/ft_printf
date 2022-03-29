@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:02:30 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/23 09:17:18 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:28:00 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "ft_printf.h"
 
-static size_t	ft_getlen_itoh(intptr_t num, int sign)
+static size_t	ft_getlen_itoh(unsigned long int num, int sign)
 {
 	size_t	length;
 
@@ -31,11 +31,12 @@ static size_t	ft_getlen_itoh(intptr_t num, int sign)
 	return (length);
 }
 
-char	*ft_itoh(intptr_t n, int cap)
+char	*ft_itoh(unsigned long int n, int cap)
 {
-	char		*buffer;
-	int			len;
-	intptr_t	new_n;
+	char				*buffer;
+	int					len;
+	unsigned long int	new_n;
+
 
 	len = ft_getlen_itoh(n, 1);
 	buffer = (char *)malloc(sizeof(char) * len + 1);

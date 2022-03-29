@@ -6,12 +6,13 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 10:52:33 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/23 20:19:17 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:57:18 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -25,13 +26,15 @@ int	main(void)
 	int				myretorno;
 	int				retorno;
 
+
 	testei = 4242;
 	tested = -4242;
 	testec = 'c';
 	testes = NULL;
-	testep = &testes;
-	testeu = -1;
+	testep = NULL;
+	testeu = 0;
 	testex = 9999;
+
 	myretorno = ft_printf("i : %i\n", testei);
 	printf("%i\n",myretorno);
 	myretorno += ft_printf("d : %d\n", tested);
