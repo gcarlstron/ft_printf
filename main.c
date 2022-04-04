@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 10:52:33 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/29 17:57:18 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 18:13:40 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	main(void)
 	int				myretorno;
 	int				retorno;
 
-
 	testei = 4242;
 	tested = -4242;
 	testec = 'c';
@@ -34,41 +33,40 @@ int	main(void)
 	testep = NULL;
 	testeu = 0;
 	testex = 9999;
-
 	myretorno = ft_printf("i : %i\n", testei);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("d : %d\n", tested);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("c : %c\n", testec);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("s : %s\n", testes);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("p : %p\n", testep);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("u : %u\n", testeu);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("x : %x\n", testex);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	myretorno += ft_printf("X : %X\n", testex);
-	printf("%i\n",myretorno);
+	printf("%i\n", myretorno);
 	ft_printf("myretorno : %i\n", myretorno);
 	printf("-------------------------------\n");
 	retorno = printf("i : %i\n", testei);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	retorno += printf("d : %d\n", tested);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	retorno += printf("c : %c\n", testec);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	retorno += printf("s : %s\n", testes);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	retorno += printf("p : %p\n", testep);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	retorno += printf("u : %u\n", testeu);
-	printf("%i\n",retorno);
-	retorno	+= printf("x : %x\n", testex);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
+	retorno += printf("x : %x\n", testex);
+	printf("%i\n", retorno);
 	retorno += printf("X : %X\n", testex);
-	printf("%i\n",retorno);
+	printf("%i\n", retorno);
 	printf("retorno : %i\n", retorno);
 	return (0);
 }

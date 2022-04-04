@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 19:51:21 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/23 20:21:19 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 18:17:40 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	printf_s(va_list args)
 	char	*string;
 	int		strlen;
 
-	string = va_arg(args, char*);
+	string = va_arg(args, char *);
 	if (!string)
 		return (write(1, "(null)", 6));
 	strlen = ft_strlen(string);

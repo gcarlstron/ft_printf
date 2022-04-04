@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 10:51:06 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/09 16:07:51 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 18:20:45 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_printf(const char *formatString, ...)
 {
 	va_list	args;
 	int		chars_written;
-	int 	written;
+	int		written;
 	char	*pointer;
 
 	va_start(args, formatString);

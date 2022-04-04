@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:02:30 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/29 17:28:00 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/03/29 18:22:32 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ char	*ft_itoh(unsigned long int n, int cap)
 	int					len;
 	unsigned long int	new_n;
 
-
 	len = ft_getlen_itoh(n, 1);
 	buffer = (char *)malloc(sizeof(char) * len + 1);
 	if (!(buffer))
@@ -45,10 +44,6 @@ char	*ft_itoh(unsigned long int n, int cap)
 	if (n == 0)
 		buffer[0] = '0';
 	buffer[len] = '\0';
-	if (cap == 0)
-		cap = 32;
-	else
-		cap = 0;
 	while (n != 0 && len >= 0)
 	{
 		new_n = n % 16;
