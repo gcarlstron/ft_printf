@@ -6,7 +6,7 @@
 #    By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 10:30:38 by gpacheco          #+#    #+#              #
-#    Updated: 2022/03/23 14:17:49 by gpacheco         ###   ########.fr        #
+#    Updated: 2022/04/11 12:09:20 by gpacheco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ CC = gcc
 
 S_DIR = srcs
 O_DIR = objs
+INCLUDES = includes
 
 SRC = $(S_DIR)/ft_printf.c
 SRC += $(S_DIR)/print_parameter.c
@@ -47,8 +48,8 @@ $(NAME):	$(OBJ)
 	ar $(AR_FLAGS) $@ $^
 
 $(O_DIR)/%.o:	$(S_DIR)/%.c
-	$(CC)	$(C_FLAGS) -I includes -c $< -o $@
-
+	mkdir -p $(O_DIR)
+	$(CC)	-I $(INCLUDES) $(C_FLAGS) -c $< -o $@
 main: 	
 	$(CC) $(C_FLAGS) main.c $(SRC) -o printf_main.out -I headers
 

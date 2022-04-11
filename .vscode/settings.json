@@ -1,7 +1,0 @@
-{
-	"editor.renderWhitespace": "all",
-	"files.associations": {
-		"limits.h": "c",
-		"iostream": "cpp"
-	}
-}
