@@ -6,7 +6,7 @@
 #    By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/22 10:30:38 by gpacheco          #+#    #+#              #
-#    Updated: 2022/04/11 12:09:20 by gpacheco         ###   ########.fr        #
+#    Updated: 2022/04/14 10:57:12 by gpacheco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,9 @@ $(NAME):	$(OBJ)
 
 $(O_DIR)/%.o:	$(S_DIR)/%.c
 	mkdir -p $(O_DIR)
-	$(CC)	-I $(INCLUDES) $(C_FLAGS) -c $< -o $@
+	$(CC)	-I $(INCLUDES) $(CC_FLAGS) -c $< -o $@
 main: 	
-	$(CC) $(C_FLAGS) main.c $(SRC) -o printf_main.out -I headers
+	$(CC) $(CC_FLAGS) main.c $(NAME) -o printf_main.out -I $(INCLUDES)
 
 re:	fclean all
 

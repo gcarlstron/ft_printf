@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:33:43 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/29 18:13:53 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/04/14 10:52:12 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	printf_d_i(va_list args)
 {
 	int		num;
-	int		counter;
 	char	*num_str;
 	int		strlen;
 

@@ -6,7 +6,7 @@
 /*   By: gpacheco <gpacheco@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 10:50:07 by gpacheco          #+#    #+#             */
-/*   Updated: 2022/03/29 18:26:49 by gpacheco         ###   ########.fr       */
+/*   Updated: 2022/04/14 10:51:51 by gpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
 int		print_parameter(char *pointer, va_list args);
